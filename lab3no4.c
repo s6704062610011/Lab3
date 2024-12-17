@@ -1,28 +1,23 @@
 #include <stdio.h>
-
 int main(void) {
-    int month;
-    scanf("%d", &month);
-
-    if (month == 12 || month == 1 || month == 2) {
-        printf("Winter");
-    } else if (month == 3 || month == 4 || month == 5) {
-        printf("Spring");
-    } else if (month == 6 || month == 7 || month == 8) {
-        printf("Summer");
-        if (month == 6) {
-            printf("\n6 months to Winter");
-        } else if (month == 7) {
-            printf("\n 5 months to Winter");
-        } else if (month == 8) {
-            printf("\n4 months to Winter");
-        }
-    } else if (month == 9 || month == 10 || month == 11) {
-        printf("Autumn");
-    } else {
-        printf("No season");
-    }
-
-    return 0;
+	int score;
+	printf("Enter tour score: ");
+	scanf("%d",&score);
+	int sum =40 - score;
+	if (score >29) {
+		if(score > 39){
+			printf("You Pass\n");
+		}
+		else if(score >= 30 && score <= 39){
+			printf("You Can test Again\n");
+			printf("Got %d score to pass\n",sum);
+		}
+	}
+	else{
+		printf("You fail\n");
+		printf("Got %d score to pass\n",sum);
+	}
+	return 0;
+	
 }
 
